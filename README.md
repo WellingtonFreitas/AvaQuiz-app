@@ -50,7 +50,7 @@
    $ git clone git@github.com:WellingtonFreitas/AvaQuiz-app.git
 
    - Entre no diretório:
-   $ cd AvaQuiz-app
+   $ cd avaQuiz_app
 
    - Inicie o app: 
    $ flutter run
