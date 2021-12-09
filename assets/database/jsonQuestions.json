@@ -1,0 +1,184 @@
+[
+    {
+        "title": "AZ-900: Descrever os conceitos do cloud",
+        "questionAnswered": 1,
+        "questions": [
+            {
+                "title": "_______________ é a entrega de serviços de computação, como poder de computação, armazenamento,rede,software e analise pela Internet. \\n Selecione a opção que completa a frase ",
+               
+				"awnsers": [
+                    {
+                        "title": "Computação em nuvem",
+                        "isRight": true
+                    },
+                    {
+                        "title": "despesas de capital (CapEx)",
+						"isRight": false
+                    },
+                    {
+                        "title": "Despesas Operacionais(OpEx)",
+						"isRight": false
+                    }
+                ]
+            },
+            {
+                "title": "Você é o engenheiro de nuvem de uma empresa de varejo. Você precisa decidir se deseja usar uma nuvem publica ou privada.\\n Qual a vantagem de usar uma nuvem pública em vez de uma nuvem privada?",
+				
+				"awnsers": [
+                    {
+                        "title": "O ambiente oferece suporte a um nível mais alto de personalização para cada locatário",
+						"isRight": false
+                    },
+                    {
+                        "title": "A escalabilidade sob demanda atende com eficiência aos requisitos de neg[ocios.",
+						"isRight": false
+                    },
+                    {
+                        "title": "Os custos são muito mais baixos e repartidos entre varios inquilinos.",
+                        "isRight": true
+                    },
+                    {
+                        "title": "Maior segurança é fornecida para os dados do locatário.",
+						"isRight": false
+                    }
+                ]
+            },
+			{
+                "title": "_______________ é a entrega de serviços de computação, como poder de computação, armazenamento,rede,software e analise pela Internet. \\n Selecione a opção que completa a frase ",
+               
+				"awnsers": [
+                    {
+                        "title": "Computação em nuvem",
+                        "isRight": true
+                    },
+                    {
+                        "title": "despesas de capital (CapEx)",
+						"isRight": false
+                    },
+                    {
+                        "title": "Despesas Operacionais(OpEx)",
+						"isRight": false
+                    }
+                ]
+            },
+            {
+                "title": "Você é o engenheiro de nuvem de uma empresa de varejo. Você precisa decidir se deseja usar uma nuvem publica ou privada.\\n Qual a vantagem de usar uma nuvem pública em vez de uma nuvem privada?",
+				
+				"awnsers": [
+                    {
+                        "title": "O ambiente oferece suporte a um nível mais alto de personalização para cada locatário",
+						"isRight": false
+                    },
+                    {
+                        "title": "A escalabilidade sob demanda atende com eficiência aos requisitos de neg[ocios.",
+						"isRight": false
+                    },
+                    {
+                        "title": "Os custos são muito mais baixos e repartidos entre varios inquilinos.",
+                        "isRight": true
+                    },
+                    {
+                        "title": "Maior segurança é fornecida para os dados do locatário.",
+						"isRight": false
+                    }
+                ]
+            }
+        ]
+    },
+	{
+        "title": "AZ-900: Descrever os conceitos do cloud",
+        
+        "questions": [
+            {
+                "title": "_______________ é a entrega de serviços de computação, como poder de computação, armazenamento,rede,software e analise pela Internet. \\n"
+				
+							"Selecione a opção que completa a frase ",
+                "questionNumber": 1,
+				"awnsers": [
+                    {
+                        "title": "Computação em nuvem",
+                        "isRight": true
+                    },
+                    {
+                        "title": "despesas de capital (CapEx)",
+						"isRight": false
+                    },
+                    {
+                        "title": "Despesas Operacionais(OpEx)",
+						"isRight": false
+                    }
+                ]
+            },
+            {
+                "title": "Você é o engenheiro de nuvem de uma empresa de varejo. Você precisa decidir se deseja usar uma nuvem publica ou privada.\\n Qual a vantagem de usar uma nuvem pública em vez de uma nuvem privada?",
+                
+				"awnsers": [
+                    {
+                        "title": "O ambiente oferece suporte a um nível mais alto de personalização para cada locatário",
+						"isRight": false
+                    },
+                    {
+                        "title": "A escalabilidade sob demanda atende com eficiência aos requisitos de neg[ocios.",
+						"isRight": false
+                    },
+                    {
+                        "title": "Os custos são muito mais baixos e repartidos entre varios inquilinos.",
+                        "isRight": true
+                    },
+                    {
+                        "title": "Maior segurança é fornecida para os dados do locatário.",
+						"isRight": false
+                    }
+                ]
+            }
+        ]
+    },
+	{
+        "title": "AZ-900: Descrever os conceitos do cloud",
+       
+        "questions": [
+            {
+                "title": "_______________ é a entrega de serviços de computação, como poder de computação, armazenamento,rede,software e analise pela Internet. \\n"
+				
+							"Selecione a opção que completa a frase ",
+                "questionNumber":1,
+				"awnsers": [
+                    {
+                        "title": "Computação em nuvem",
+                        "isRight": true
+                    },
+                    {
+                        "title": "despesas de capital (CapEx)",
+						"isRight": false
+                    },
+                    {
+                        "title": "Despesas Operacionais(OpEx)",
+						"isRight": false
+                    }
+                ]
+            },
+            {
+                "title": "Você é o engenheiro de nuvem de uma empresa de varejo. Você precisa decidir se deseja usar uma nuvem publica ou privada.\\n Qual a vantagem de usar uma nuvem pública em vez de uma nuvem privada?",
+                
+				"awnsers": [
+                    {
+                        "title": "O ambiente oferece suporte a um nível mais alto de personalização para cada locatário",
+						"isRight": false
+                    },
+                    {
+                        "title": "A escalabilidade sob demanda atende com eficiência aos requisitos de neg[ocios.",
+						"isRight": false
+                    },
+                    {
+                        "title": "Os custos são muito mais baixos e repartidos entre varios inquilinos.",
+                        "isRight": true
+                    },
+                    {
+                        "title": "Maior segurança é fornecida para os dados do locatário.",
+						"isRight": false
+                    }
+                ]
+            }
+        ]
+    }
+]
