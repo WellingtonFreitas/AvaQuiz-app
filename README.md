@@ -47,7 +47,7 @@
 
    ```
    - Clone esse repositório:
-   $ git clone git@github.com:WellingtonFreitas/AvaQuiz-app.git
+   $ git clone git@github.com:WellingtonFreitas/avaQuiz_app.git
 
    - Entre no diretório:
    $ cd avaQuiz_app
