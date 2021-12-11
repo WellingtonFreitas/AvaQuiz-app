@@ -1,7 +1,7 @@
 # AvaQuiz
 
 <p align="center">
-   <img alt="PayFlow" src="https://github.com/WellingtonFreitas/AvaQuiz-app/blob/main/assets/images/capa.png?raw=true" width="1000px">
+   <img alt="PayFlow" src="https://github.com/WellingtonFreitas/avaQuiz_app/blob/main/ava_quiz_app/assets/images/capa.png?raw=true?raw=true" width="1000px">
 </p>
 
 
