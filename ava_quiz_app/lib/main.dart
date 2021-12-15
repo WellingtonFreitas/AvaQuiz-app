@@ -1,5 +1,7 @@
 import 'package:ava_quiz_app/application/bindings/application_bindings.dart';
+import 'package:ava_quiz_app/application/modules/home/home_module.dart';
 import 'package:ava_quiz_app/application/modules/login/login_module.dart';
+import 'package:ava_quiz_app/application/ui/devquiz_app_ui_config.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,13 +21,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       initialBinding: ApplicationBindings(),
-      title: 'AvaQuiz',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      title: DevquizAppUiConfig.title,
+      theme: DevquizAppUiConfig.theme,
       getPages: [
         ...SplashModule().routers,
         ...LoginModule().routers,
+        ...HomeModule().routers,
       ],
     );
   }

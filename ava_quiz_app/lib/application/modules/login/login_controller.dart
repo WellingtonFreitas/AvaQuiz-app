@@ -27,14 +27,18 @@ class LoginController extends GetxController with LoaderMixin, MesssagesMixin {
       loading.value = true;
       await _loginService.login();
       loading.value = false;
-      MessageModel.sucess(
-        title: 'Sucesso',
-        message: 'Login realizado com sucesso',
+      message(
+        MessageModel.sucess(
+          title: 'Sucesso',
+          message: 'Login realizado com sucesso',
+        ),
       );
     } catch (e) {
       print(e);
-      MessageModel.error(
-          title: 'Erro', message: 'Erro ao realizar login ${e.toString()}');
+      message(MessageModel.error(
+        title: 'Erro',
+        message: 'Erro ao realizar login ${e.toString()}',
+      ));
     }
   }
 }
