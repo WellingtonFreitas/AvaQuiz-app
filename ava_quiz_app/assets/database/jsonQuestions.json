@@ -44,7 +44,7 @@
                 ]
             },
 			{
-                "title": "_______________ é a entrega de serviços de computação, como poder de computação, armazenamento,rede,software e analise pela Internet. \\n Selecione a opção que completa a frase ",
+                "title": "_______________ é a entrega de serviços de computação, como poder de computação, armazenamento,rede,software e analise pela Internet.  Selecione a opção que completa a frase ",
                
 				"awnsers": [
                     {
@@ -90,9 +90,7 @@
         
         "questions": [
             {
-                "title": "_______________ é a entrega de serviços de computação, como poder de computação, armazenamento,rede,software e analise pela Internet. \\n"
-				
-							"Selecione a opção que completa a frase ",
+                "title": "_______________ é a entrega de serviços de computação, como poder de computação, armazenamento,rede,software e analise pela Internet. Selecione a opção que completa a frase ",
                 "questionNumber": 1,
 				"awnsers": [
                     {
@@ -138,9 +136,7 @@
        
         "questions": [
             {
-                "title": "_______________ é a entrega de serviços de computação, como poder de computação, armazenamento,rede,software e analise pela Internet. \\n"
-				
-							"Selecione a opção que completa a frase ",
+                "title": "_______________ é a entrega de serviços de computação, como poder de computação, armazenamento,rede,software e analise pela Internet. Selecione a opção que completa a frase ",
                 "questionNumber":1,
 				"awnsers": [
                     {

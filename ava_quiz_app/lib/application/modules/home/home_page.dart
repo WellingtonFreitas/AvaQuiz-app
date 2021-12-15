@@ -4,6 +4,7 @@
 import 'package:ava_quiz_app/application/modules/history/history_page.dart';
 import 'package:ava_quiz_app/application/modules/home/home_binding.dart';
 import 'package:ava_quiz_app/application/modules/home/home_controller.dart';
+import 'package:ava_quiz_app/application/modules/quizzes/quizzes_bindings.dart';
 import 'package:ava_quiz_app/application/modules/quizzes/quizzes_page.dart';
 import 'package:ava_quiz_app/application/ui/my_flutter_icons_icons.dart';
 import 'package:ava_quiz_app/layout/app_colors.dart';
@@ -23,8 +24,10 @@ class HomePage extends GetView<HomeController> {
             if (settings.name == '/quiz') {
               return GetPageRoute(
                 settings: settings,
-                page: () => QuizzesPage(),
-                binding: HomeBinding(),
+                page: () => QuizzesPage(
+                  user: controller.user!,
+                ),
+                binding: QuizzesBindings(),
               );
             }
             if (settings.name == '/history') {
