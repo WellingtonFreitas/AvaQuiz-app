@@ -16,10 +16,15 @@ class LoginRepositoryImpl implements LoginRepository {
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
-      print('usuario google: ${googleUser}');
       return FirebaseAuth.instance.signInWithCredential(credential);
     } else {
       throw Exception('Erro ao realizar login com o google');
     }
+  }
+
+  @override
+  Future<void> logout() async {
+    await GoogleSignIn().signOut();
+    FirebaseAuth.instance.signOut();
   }
 }

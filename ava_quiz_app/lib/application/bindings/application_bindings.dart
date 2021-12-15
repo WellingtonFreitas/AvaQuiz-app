@@ -1,3 +1,4 @@
+import 'package:ava_quiz_app/application/auth/auth_service.dart';
 import 'package:ava_quiz_app/repositories/login/login_repository.dart';
 import 'package:ava_quiz_app/repositories/login/login_repository_impl.dart';
 import 'package:ava_quiz_app/services/login/login_service.dart';
@@ -15,5 +16,6 @@ class ApplicationBindings implements Bindings {
       () => LoginServiceImpl(loginRepository: Get.find()),
       fenix: true,
     );
+    Get.put(AuthService()).init();
   }
 }
