@@ -1,6 +1,7 @@
 import 'package:ava_quiz_app/application/bindings/application_bindings.dart';
 import 'package:ava_quiz_app/application/modules/home/home_module.dart';
 import 'package:ava_quiz_app/application/modules/login/login_module.dart';
+import 'package:ava_quiz_app/application/modules/questions/question_module.dart';
 import 'package:ava_quiz_app/application/ui/devquiz_app_ui_config.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       initialBinding: ApplicationBindings(),
       title: DevquizAppUiConfig.title,
       theme: DevquizAppUiConfig.theme,
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
         ...SplashModule().routers,
         ...LoginModule().routers,
         ...HomeModule().routers,
+        ...QuestionModule().routers,
       ],
     );
   }
