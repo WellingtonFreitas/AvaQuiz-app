@@ -1,21 +1,44 @@
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:ava_quiz_app/application/modules/questions/question_controller.dart';
+import 'package:ava_quiz_app/application/modules/questions/widgets/button_widget.dart';
 import 'package:ava_quiz_app/application/modules/questions/widgets/progess_indicator_widget.dart';
 import 'package:ava_quiz_app/application/modules/questions/widgets/question_indicator_widget.dart';
-import 'package:ava_quiz_app/application/modules/questions/widgets/quizz_widget.dart';
+import 'package:ava_quiz_app/application/modules/questions/widgets/question_widget.dart';
+import 'package:ava_quiz_app/application/modules/result/result_page.dart';
 import 'package:ava_quiz_app/layout/app_colors.dart';
+import 'package:ava_quiz_app/layout/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class QuestionPage extends GetView<QuestionController> {
+class QuestionPage extends StatefulWidget {
   const QuestionPage({Key? key}) : super(key: key);
+
+  @override
+  State<QuestionPage> createState() => _QuestionPageState();
+}
+
+class _QuestionPageState extends State<QuestionPage> {
+  final controller = QuestionController();
+  void onSelected(bool value) {
+    if (value) {
+      controller.awnserRight++;
+    }
+    nextQuestion();
+  }
+
+  void nextQuestion() {
+    if (controller.currentQuestion < controller.quizz.questions.length) {
+      controller.nextQuestion();
+      setState(() {});
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(186),
+        preferredSize: Size.fromHeight(86),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,15 +50,8 @@ class QuestionPage extends GetView<QuestionController> {
                 },
               ),
               QuestionIndicatorWidget(
-                currentQuestion: controller.currentQuestion + 1,
+                currentQuestion: controller.currentQuestion,
                 length: controller.quizz.questions.length,
-              ),
-              SizedBox(
-                height: 16,
-              ),
-              ProgessIndicatorWidget(
-                value: controller.currentQuestion +
-                    1 / controller.quizz.questions.length,
               ),
             ],
           ),
@@ -47,31 +63,44 @@ class QuestionPage extends GetView<QuestionController> {
             horizontal: 20,
             vertical: 20,
           ),
-          child: QuizzWidget(
+          child: QuestionWidget(
             question: controller.quizz.questions[controller.currentQuestion],
+            onSelected: onSelected,
           ),
         ),
       ),
       bottomNavigationBar: SafeArea(
-        bottom: true,
-        child: Container(
-          height: 48,
-          child: TextButton(
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(AppColors.white),
-              shape: MaterialStateProperty.all(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          child: Row(
+            children: [
+              if (controller.currentQuestion + 1 <
+                  controller.quizz.questions.length)
+                Expanded(
+                  child: ButtonWidget.next(
+                    label: 'Pular',
+                    onTap: nextQuestion,
+                  ),
+                )
+              else if (controller.currentQuestion + 1 ==
+                  controller.quizz.questions.length)
+                Expanded(
+                  child: ButtonWidget.confirm(
+                      label: 'Confirmar',
+                      onTap: () => {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ResultPage(
+                                  title: controller.quizz.title,
+                                  lenght: controller.quizz.questions.length,
+                                  result: controller.awnserRight,
+                                ),
+                              ),
+                            )
+                          }),
                 ),
-              ),
-              side: MaterialStateProperty.all(
-                BorderSide(color: AppColors.border),
-              ),
-            ),
-            child: Text(
-              'Pular',
-            ),
-            onPressed: () => {},
+            ],
           ),
         ),
       ),

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 class AwnserModel {
   final String title;
-  final bool? isRight;
+  final bool isRight;
 
   AwnserModel({
     required this.title,
@@ -19,11 +19,12 @@ class AwnserModel {
   factory AwnserModel.fromMap(Map<String, dynamic> map) {
     return AwnserModel(
       title: map['title'] ?? '',
-      isRight: map['isRight'],
+      isRight: map['isRight'] ?? false,
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory AwnserModel.fromJson(String source) => AwnserModel.fromMap(json.decode(source));
+  factory AwnserModel.fromJson(String source) =>
+      AwnserModel.fromMap(json.decode(source));
 }
