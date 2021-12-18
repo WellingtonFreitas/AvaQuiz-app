@@ -5,7 +5,7 @@ class QuestionBindings implements Bindings {
   @override
   void dependencies() {
     Get.put(
-      QuestionController(),
+      QuestionController(authService: Get.find()),
     );
   }
 }

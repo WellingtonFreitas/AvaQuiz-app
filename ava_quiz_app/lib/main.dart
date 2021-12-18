@@ -1,7 +1,9 @@
 import 'package:ava_quiz_app/application/bindings/application_bindings.dart';
+import 'package:ava_quiz_app/application/modules/history/history_module.dart';
 import 'package:ava_quiz_app/application/modules/home/home_module.dart';
 import 'package:ava_quiz_app/application/modules/login/login_module.dart';
 import 'package:ava_quiz_app/application/modules/questions/question_module.dart';
+import 'package:ava_quiz_app/application/modules/result/result_module.dart';
 import 'package:ava_quiz_app/application/ui/devquiz_app_ui_config.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +32,8 @@ class MyApp extends StatelessWidget {
         ...LoginModule().routers,
         ...HomeModule().routers,
         ...QuestionModule().routers,
+        ...ResultModule().routers,
+        ...HistoryModule().routers,
       ],
     );
   }

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
+import 'package:ava_quiz_app/application/modules/history/history_bindings.dart';
 import 'package:ava_quiz_app/application/modules/history/history_page.dart';
 import 'package:ava_quiz_app/application/modules/home/home_binding.dart';
 import 'package:ava_quiz_app/application/modules/home/home_controller.dart';
@@ -34,7 +35,7 @@ class HomePage extends GetView<HomeController> {
               return GetPageRoute(
                 settings: settings,
                 page: () => HistoryPage(),
-                binding: HomeBinding(),
+                binding: HistoryBindings(),
               );
             }
             return null;

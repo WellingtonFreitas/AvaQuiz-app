@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
-import 'package:ava_quiz_app/application/modules/questions/widgets/progess_indicator_widget.dart';
+import 'package:ava_quiz_app/application/ui/progess_indicator_widget.dart';
 import 'package:flutter/material.dart';
 
 class QuestionIndicatorWidget extends StatelessWidget {
@@ -45,7 +45,7 @@ class QuestionIndicatorWidget extends StatelessWidget {
               ),
               SizedBox(height: 16),
               ProgessIndicatorWidget(
-                value: currentQuestion + 1 / length,
+                value: (currentQuestion + 1) / length,
               ),
             ],
           ),
