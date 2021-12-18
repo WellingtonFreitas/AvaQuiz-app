@@ -2,7 +2,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:ava_quiz_app/application/modules/questions/question_controller.dart';
 import 'package:ava_quiz_app/application/modules/questions/widgets/button_widget.dart';
-import 'package:ava_quiz_app/application/modules/questions/widgets/progess_indicator_widget.dart';
+import 'package:ava_quiz_app/application/ui/progess_indicator_widget.dart';
 import 'package:ava_quiz_app/application/modules/questions/widgets/question_indicator_widget.dart';
 import 'package:ava_quiz_app/application/modules/questions/widgets/question_widget.dart';
 import 'package:ava_quiz_app/application/modules/result/result_page.dart';
@@ -19,7 +19,7 @@ class QuestionPage extends StatefulWidget {
 }
 
 class _QuestionPageState extends State<QuestionPage> {
-  final controller = QuestionController();
+  final controller = QuestionController(authService: Get.find());
   void onSelected(bool value) {
     if (value) {
       controller.awnserRight++;
@@ -28,7 +28,7 @@ class _QuestionPageState extends State<QuestionPage> {
   }
 
   void nextQuestion() {
-    if (controller.currentQuestion < controller.quizz.questions.length) {
+    if (controller.currentQuestion + 1 < controller.quizz.questions.length) {
       controller.nextQuestion();
       setState(() {});
     }
@@ -86,19 +86,9 @@ class _QuestionPageState extends State<QuestionPage> {
                   controller.quizz.questions.length)
                 Expanded(
                   child: ButtonWidget.confirm(
-                      label: 'Confirmar',
-                      onTap: () => {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ResultPage(
-                                  title: controller.quizz.title,
-                                  lenght: controller.quizz.questions.length,
-                                  result: controller.awnserRight,
-                                ),
-                              ),
-                            )
-                          }),
+                    label: 'Confirmar',
+                    onTap: () => controller.goToResult(),
+                  ),
                 ),
             ],
           ),
